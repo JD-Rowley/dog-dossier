@@ -1,4 +1,5 @@
-const { DataTypes } = require("sequelize/types");
+const { Model, DataTypes } = require("sequelize/types");
+const sequelize = require('../config/connection');
 
 class Breed extends Model{}
 
@@ -10,16 +11,24 @@ Breed.init(
             primaryKey: true,
             autoIncrement: true
         },
-        height: {
+        height_min: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        weight: {
+        height_max: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        weight_min: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        weight_max: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
         coloring: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(30),
             allowNull: false
         },
         health_id: {
