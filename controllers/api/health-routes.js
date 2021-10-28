@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Breed, Color, Level, Health, Traits, Post, User } = require('../../models');
+const { Health } = require('../../models');
 
 router.get('/', (req, res) => {
     Health.findAll()
@@ -74,3 +74,5 @@ router.delete('/:id', (req, res) => {
         res.status(500).json(err);
     });
 });
+
+module.exports = router;
