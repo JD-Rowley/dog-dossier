@@ -11,13 +11,16 @@ Breed.init(
             autoIncrement: true
         },
         height: {
-
+            type: DataTypes.INTEGER,
+            allowNull: false
         },
         weight: {
-
+            type: DataTypes.INTEGER,
+            allowNull: false
         },
         coloring: {
-
+            type: DataTypes.STRING,
+            allowNull: false
         },
         health_id: {
             type: DataTypes.INTEGER,
@@ -34,8 +37,19 @@ Breed.init(
             }
         },
         post_id: {
-
+            type: DataTypes.INTEGER,
+            reference: {
+                model: 'post',
+                key: 'id'
+            }
         }
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'breed'
     }
 );
 
