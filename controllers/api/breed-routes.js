@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Breed, Color, Level, Health, Traits, Post, User } = require('../../model');
+const { Breed, Color, Level, Health, Traits, Post, User } = require('../../models');
 
 // get all breeds
 router.get('/', (req, res) => {

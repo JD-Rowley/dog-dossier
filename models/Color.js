@@ -1,9 +1,9 @@
-const { Model, DataTypes } = require("sequelize/types");
+const { Model, DataTypes } = require("sequelize");
 const sequelize = require('../config/connection');
 
-class Traits extends Model{}
+class Color extends Model{}
 
-Traits.init(
+Color.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,8 +11,8 @@ Traits.init(
             primaryKey: true,
             autoIncrement: true
         },
-        traits_name: {
-            type: DataTypes.STRING,
+        color_name: {
+            type: DataTypes.STRING(20),
             allowNull: false
         }
     },
@@ -21,8 +21,8 @@ Traits.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'traits'
+        modelName: 'color'
     }
 );
 
-module.exports = Traits;
+module.exports = Color;
