@@ -11,6 +11,10 @@ Breed.init(
             primaryKey: true,
             autoIncrement: true
         },
+        breed_name: {
+            type: DataTypes.STRING(20),
+            allowNull: false,
+        },
         height_min: {
             type: DataTypes.INTEGER,
             allowNull: false
@@ -27,9 +31,17 @@ Breed.init(
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        coloring: {
-            type: DataTypes.STRING(30),
+        color_id: {
+            type: DataTypes.INTEGER,
             allowNull: false
+        },
+        level_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            reference: {
+                model: 'level',
+                key: 'id'
+            }
         },
         health_id: {
             type: DataTypes.INTEGER,
