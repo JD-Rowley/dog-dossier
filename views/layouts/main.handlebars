@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Dog Dossier</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>
+                <a href="/">Dog Dossier</a>
+            </h1>
+            <nav>
+                <a href="">About</a>
+                <a href="">Search Breeds</a>
+                <a href="">Posts</a>
+                <a href="">Contact</a>
+                {{#if loggedIn}}
+                <a href="/dashboard">Dashboard</a>
+                {{else}}
+                <a href="/login">Login</a>
+                {{/if}}
+            </nav>
+        </header>
+        <main class="hero">
+            <h1></h1>
+            <h2></h2>
+        </main>
+        <div class="about">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure voluptatibus corrupti quia assumenda dolorum molestiae error eligendi iusto aliquam. Saepe, quas? Corporis porro optio tempore impedit assumenda incidunt enim fugiat.</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
