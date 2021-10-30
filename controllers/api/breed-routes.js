@@ -11,11 +11,7 @@ router.get('/', (req, res) => {
             'height_max',
             'weight_min',
             'weight_max',
-            'color_id',
             'level_id',
-            'health_id',
-            'traits_id',
-            'post_id',
         ],
         order: [['breed_name', 'ASC']],
         include: [
@@ -104,10 +100,7 @@ router.post('/', (req, res) => {
         height_max: req.body.height_max,
         weight_min: req.body.weight_min,
         weigth_max: req.body.weight_max,
-        color_id: req.body.color_id,
         level_id: req.body.level_id,
-        health_id: req.body.health_id,
-        traits_id: req.body.traits_id,
     })
     .then(dbBreedData => res.json(dbBreedData))
     .catch(err => {
