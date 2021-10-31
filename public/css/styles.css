@@ -1,0 +1,25 @@
+:root {
+    --primary: #195F6B;
+    --secondary: #16BAC6;
+    --background: #EFF0F4;
+    --border: #112025;
+    --text: #FDC161;
+}
+
+* {
+    font-family: 'Amatic SC', cursive;
+    color: white;
+}
+
+header {
+    background-color: var(--primary);
+}
+
+.home-btn {
+    font-size: 72px;
+    font-weight: 700;
+}
+
+.nav-btns {
+    font-size: 36px;
+}
