@@ -17,19 +17,35 @@ Breed.init(
         },
         height_min: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false, 
+            validate: {
+                min: 5,
+                max: 40
+            }
         },
         height_max: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
+            validate: {
+                min: 7,
+                max: 60
+            }
         },
         weight_min: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false, 
+            validate: {
+                min: 5,
+                max: 150
+            }
         },
         weight_max: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false, 
+            validate: {
+                min: 7,
+                max: 200
+            }
         },
         color_id: {
             type: DataTypes.INTEGER,
