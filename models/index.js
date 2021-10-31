@@ -2,40 +2,55 @@
 const Breed = require('./Breed');
 const Color = require('./Color');
 const Health = require('./Health');
-const Level = require('./Level');
-const Post = require('./Post');
+// const Level = require('./Level');
+// const Post = require('./Post');
 const Traits = require('./Traits');
-const User = require('./User');
+// const User = require('./User');
 const BreedColor = require('./BreedColor');
 const BreedHealth = require('./BreedHealth');
 const BreedTraits = require('./BreedTraits');
 
 // associations
 Breed.belongsToMany(Color, {
-    through: 'BreedColor',
-    as: 'color'
+    through: 'breedColor',
+});
+
+Color.belongsToMany(Breed, {
+    through: 'breedColor',
 });
 
 Breed.belongsToMany(Health, {
-    through: 'BreedHealth',
-    as: 'health'
+    through: 'breedHealth',
+});
+
+Health.belongsToMany(Breed, {
+    through: 'breedHealth',
 });
 
 Breed.belongsToMany(Traits, {
-    through: 'BreedTraits',
-    as: 'traits'
+    through: 'breedTraits',
 });
 
-Level.hasMany(Breed, {
-    foreignKey: 'level_id'
+Traits.belongsToMany(Breed, {
+    through: 'breedTraits',
 });
 
-User.hasMany(Post, {
-    foreignKey: 'user_id'
-});
+// Level.hasMany(Breed, {
+//     constraints: false,
+//     foreignKey: 'level_id'
+// });
 
-Post.belongsTo(User, {
-    foreignKey: 'user_id'
-});
+// Breed.hasOne(Level, {
+//     constraints: false,
+//     foreignKey: 'id'
+// })
 
-module.exports = { Breed, Color, Level, Health, Traits, Post, User, BreedColor, BreedHealth, BreedTraits };
+// User.hasMany(Post, {
+//     foreignKey: 'user_id'
+// });
+
+// Post.belongsTo(User, {
+//     foreignKey: 'user_id'
+// });
+
+module.exports = { Breed, Color, Health, Traits, BreedColor, BreedHealth, BreedTraits };

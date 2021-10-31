@@ -12,7 +12,7 @@ Breed.init(
             autoIncrement: true
         },
         breed_name: {
-            type: DataTypes.STRING(20),
+            type: DataTypes.STRING,
             allowNull: false,
         },
         height_min: {
@@ -47,15 +47,15 @@ Breed.init(
                 max: 200
             }
         },
-        level_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            reference: {
-                model: 'level',
-                key: 'id'
-            }
-        }
-        
+        // level_id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     defaultValue: 1,
+        //     reference: {
+        //         model: 'level',
+        //         key: 'id'
+        //     }
+        // }
     },
     {
         sequelize,

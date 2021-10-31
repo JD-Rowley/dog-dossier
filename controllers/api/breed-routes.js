@@ -1,28 +1,28 @@
 const router = require('express').Router();
-const { Breed, Color, Level, Health, Traits, Post, User } = require('../../models');
+const { Breed, Color, Health, Traits } = require('../../models');
 
 // get all breeds
 router.get('/', (req, res) => {
     Breed.findAll({
-        attributes: [
-            'id',
-            'breed_name',
-            'height_min',
-            'height_max',
-            'weight_min',
-            'weight_max',
-            'level_id',
-        ],
+        // attributes: [
+        //     'id',
+        //     'breed_name',
+        //     'height_min',
+        //     'height_max',
+        //     'weight_min',
+        //     'weight_max',
+        //     // 'level_id',
+        // ],
         order: [['breed_name', 'ASC']],
         include: [
             {
                 model: Color,
                 attributes: ['color_name']
             },
-            {
-                model: Level,
-                attributes: ['level_name']
-            },
+            // {
+            //     model: Level,
+            //     attributes: ['level_name']
+            // },
             {
                 model: Health,
                 attributes: ['health_name', 'description']
@@ -31,14 +31,14 @@ router.get('/', (req, res) => {
                 model: Traits,
                 attributes: ['traits_name']
             },
-            {
-                model: Post,
-                attributes: ['id', 'title'],
-                include: {
-                    model: User,
-                    attributes: ['username']
-                }
-            }
+            // {
+            //     model: Post,
+            //     attributes: ['id', 'title'],
+            //     include: {
+            //         model: User,
+            //         attributes: ['username']
+            //     }
+            // }
         ]
     }).then(dbBreedData => res.json(dbBreedData))
     .catch(err => {

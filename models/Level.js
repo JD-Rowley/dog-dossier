@@ -12,7 +12,7 @@ Level.init(
             autoIncrement: true
         },
         level_name: {
-            type: DataTypes.STRING(10),
+            type: DataTypes.STRING,
             allowNull: false
         }
     },

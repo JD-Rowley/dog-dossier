@@ -16,7 +16,7 @@ Health.init(
             allowNull: false
         },
         description: {
-            type: DataTypes.STRING(150),
+            type: DataTypes.STRING,
             allowNull: false
         }
     },

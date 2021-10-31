@@ -12,16 +12,14 @@ BreedTraits.init(
             autoIncrement: true
         },
         breed_id: {
-            type: DataTypes.STRING(20),
-            allowNull: false,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'breed',
                 key: 'id'
             }
         },
         traits_id: {
-            type: DataTypes.STRING(20),
-            allowNull: false,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'traits',
                 key: 'id'

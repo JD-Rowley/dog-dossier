@@ -12,16 +12,14 @@ BreedColor.init(
             autoIncrement: true
         },
         breed_id: {
-            type: DataTypes.STRING(20),
-            allowNull: false,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'breed',
                 key: 'id'
             }
         },
         color_id: {
-            type: DataTypes.STRING(20),
-            allowNull: false,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'color',
                 key: 'id'
