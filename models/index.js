@@ -42,12 +42,10 @@ Traits.belongsToMany(Breed, {
 });
 
 // Level.hasMany(Breed, {
-//     constraints: false,
 //     foreignKey: 'level_id'
 // });
 
 // Breed.hasOne(Level, {
-//     constraints: false,
 //     foreignKey: 'id'
 // })
 
