@@ -12,7 +12,7 @@
 }
 .bg-img {
     height: 50vh;
-    background:linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.3)), url(./assets/images/dogs-g6199740f8_1920.jpg);
+    background:linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.3)), url(./images/dogs-g6199740f8_1920.jpg);
     background-size:cover;
     background-position: center;
 }
@@ -35,6 +35,11 @@
     font-size: 4.5vh;
     font-weight: bold;
     position: relative;
+}
+
+.search-form {
+    background-color: var(--secondary);
+    border: 3px solid white;
 }
 
 .about {
@@ -82,3 +87,4 @@ header ul li a {
     font-size:3.5vh;
     color: var(--background);
 }
+
