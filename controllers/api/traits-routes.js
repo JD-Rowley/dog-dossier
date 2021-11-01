@@ -12,9 +12,10 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     Traits.findOne({
-        id: req.params.id
-    })
-    .then(dbTraitsData => {
+        where: {
+            id: req.params.id
+        }
+    }).then(dbTraitsData => {
         if (!dbTraitsData) {
             res.status(404).json({ message: 'No trait data for this id' });
             return;

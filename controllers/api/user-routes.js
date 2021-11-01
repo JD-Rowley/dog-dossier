@@ -21,7 +21,7 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: { exclude: [password] },
+        attributes: { exclude: ['password'] },
         include: {
             model: Post,
             attributes: ['id', 'title', 'created_at']

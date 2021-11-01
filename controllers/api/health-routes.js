@@ -60,7 +60,9 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
     Health.destroy({
-        id: req.params.id
+        where: {
+            id: req.params.id
+        }
     })
     .then(dbHealthData => {
         if (!dbHealthData) {

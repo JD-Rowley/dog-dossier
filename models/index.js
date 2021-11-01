@@ -2,7 +2,7 @@
 const Breed = require('./Breed');
 const Color = require('./Color');
 const Health = require('./Health');
-// const Level = require('./Level');
+const Level = require('./Level');
 const Traits = require('./Traits');
 const BreedColor = require('./BreedColor');
 const BreedHealth = require('./BreedHealth');
@@ -57,4 +57,4 @@ Post.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-module.exports = { Breed, Color, Health, Traits, BreedColor, BreedHealth, BreedTraits, User, Post };
+module.exports = { Breed, Color, Health, Level, Traits, BreedColor, BreedHealth, BreedTraits, User, Post };
