@@ -82,3 +82,30 @@ header ul li a {
     font-size:3.5vh;
     color: var(--background);
 }
+
+.forms {
+    background-color: var(--background);
+}
+
+.form-text {
+    color: var(--primary);
+    text-align: end;
+    font-size: 24px;
+    margin-top: 18px;
+}
+
+.text-input {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    width: 35%;
+    border-radius: 5px;
+}
+
+.submit {
+    background-color: var(--primary);
+    border-radius: 5px;
+}
+
+.submit:hover {
+    background-color: var(--secondary);
+}
