@@ -212,7 +212,7 @@ const breedTraitsData = [
     {
         breed_id: 53,
         traits_id: 2
-    },
+    }
 ];
 
 const seedBreedTraits = () => BreedTraits.bulkCreate(breedTraitsData);
