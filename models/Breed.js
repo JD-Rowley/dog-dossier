@@ -50,7 +50,6 @@ Breed.init(
         // level_id: {
         //     type: DataTypes.INTEGER,
         //     allowNull: false,
-        //     defaultValue: 1,
         //     reference: {
         //         model: 'level',
         //         key: 'id'
