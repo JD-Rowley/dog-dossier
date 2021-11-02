@@ -28,7 +28,7 @@
    
 }
 
-.hero h2 {
+.hero h3 {
     color:gray ;
     text-shadow: 2px 2px 2px  black;
     text-align: center;
@@ -40,6 +40,7 @@
 .search-form {
     background-color: var(--secondary);
     border: 3px solid white;
+    border-radius: 5px;
 }
 
 .about {
@@ -67,6 +68,48 @@
     font-weight: bold;
     text-shadow: 1px 1px 1px black;
     
+}
+
+.contact {
+    background-color: var(--primary);
+    border-bottom: 1px solid white;
+    height: 200px;
+
+}
+
+.contact h2 {
+    font-size: 13vh;
+    color: var(--text);
+    font-weight: bold;
+    text-shadow: 5px 5px 5px black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact h3 {
+    text-align: center;
+    margin-top: 45px;
+    font-weight: bold;
+}
+
+.contact p {
+    font-size: 3.5vh;
+    margin-top: 41.5px;
+    font-weight: bold;
+}
+
+.contact iframe {
+    margin-top: 25px;
+    border: 2px solid white;
+}
+
+.find-breed {
+    font-size: 10vh;
+    color: var(--text);
+    font-weight: bold;
+    text-shadow: 5px 5px 5px black;
+    margin-top: 50px;
+
 }
 
 header, footer {
