@@ -35,7 +35,7 @@ Breed.init(
             type: DataTypes.INTEGER,
             allowNull: false, 
             validate: {
-                min: 5,
+                min: 3,
                 max: 150
             }
         },
