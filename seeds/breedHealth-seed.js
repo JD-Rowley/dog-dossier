@@ -205,14 +205,14 @@ const breedHealthData = [
         breed_id: 51,
         health_id: 10
     },
-    {
-        breed_id: 52,
-        health_id: 11
-    },
-    {
-        breed_id: 53,
-        health_id: 2
-    }
+    // {
+    //     breed_id: 52,
+    //     health_id: 11
+    // },
+    // {
+    //     breed_id: 53,
+    //     health_id: 2
+    // }
 ];
 
 const seedBreedHealth = () => BreedHealth.bulkCreate(breedHealthData);

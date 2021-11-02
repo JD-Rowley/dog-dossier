@@ -11,15 +11,74 @@
     color: white;
 }
 
-header {
+.bg-img {
+    height: 50vh;
+    background:linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.3)), url(../img/dogs-g6199740f8_1920.jpg);
+    background-size:cover;
+    background-position: center;
+}
+
+.hero h1 {
+    color: var(--text);
+    text-shadow: 5px 5px 5px  black;
+    text-align: center;
+    font-size: 18vh;
+    font-weight: bolder;
+    
+   
+}
+
+.hero h2 {
+    color:gray ;
+    text-shadow: 2px 2px 2px  black;
+    text-align: center;
+    font-size: 4.5vh;
+    font-weight: bold;
+    position: relative;
+}
+
+.about {
+    display: flex;
+    background-color: var(--secondary);
+    border: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+    height: 25vh;
+    
+}
+
+.about h2 {
+    color: var(--text);
+    font-size: 10vh;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.about p {
+    font-size: 2vh;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+    
+}
+
+header, footer {
     background-color: var(--primary);
 }
 
+header ul li a {
+    color: var(--background);
+    text-decoration-color: var(--background);
+}
+
 .home-btn {
-    font-size: 72px;
-    font-weight: 700;
+    font-size: 4vh;
+    font-weight:bold;
 }
 
 .nav-btns {
-    font-size: 36px;
+    font-size:3.5vh;
+    color: var(--background);
 }

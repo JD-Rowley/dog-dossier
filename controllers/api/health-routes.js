@@ -10,21 +10,21 @@ router.get('/', (req, res) => {
         });
 });
 
-router.get('/:id', (res, req) => {
+router.get('/:id', (req, res) => {
     Health.findOne({
         where: {
             id: req.params.id
         }
     }).then(dbHealthData => {
         if (!dbHealthData) {
-            res.statusCode(404).json({ message: 'No health data for this id' });
+            res.status(404).json({ message: 'No health data for this id' });
             return;
         }
         res.json(dbHealthData);
     })
     .catch(err => {
         console.log(err);
-        res.statusCode(500).json(err);
+        res.json(500).json(err);
     });
 });
 
