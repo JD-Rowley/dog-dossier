@@ -9,7 +9,6 @@
 * {
     font-family: 'Amatic SC', cursive;
     color: white;
-    text-align: center;
 }
 
 
@@ -94,12 +93,15 @@
     margin: 10px;
 }
 
+.hero {
+    text-align: center;
+}
+
 .hero h1 {
     color: var(--text);
     text-shadow: 5px 5px 5px  black;
     font-size: 18vh;
     font-weight: bolder;
-    
    
 }
 
@@ -118,7 +120,7 @@
     justify-content: space-between;
     align-items: center;
     height: 25vh;
-    
+    text-align: center;
 }
 
 .about h2 {
@@ -157,12 +159,12 @@ header ul li a {
     color: var(--background);
 }
 
-.forms,
 .posts {
-    background-color: var(--background);
+    background-color: var(--secondary);
 }
 
 .forms {
+    background-color: var(--background);
     height: 68vh;
 }
 
@@ -201,4 +203,14 @@ header ul li a {
 
 .post-main {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.results-text {
+    text-align: center;
+}
+
+#scrolling-posts {
+    height: 400px;
+    width: 400px;
+    overflow-y: auto;
 }

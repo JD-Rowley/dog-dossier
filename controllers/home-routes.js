@@ -66,7 +66,7 @@ router.get('/results/:id', (req, res) => {
     //         },
     //         {
     //             model: 'post',
-    //             attributes: ['id', 'title'],
+    //             attributes: ['id', 'title', text-body, created_at],
     //             include: {
     //                 model: 'user',
     //                 attributes: ['username']
