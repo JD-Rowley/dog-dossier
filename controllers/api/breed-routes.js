@@ -4,15 +4,6 @@ const { Breed, Color, Health, Traits } = require('../../models');
 // get all breeds
 router.get('/', (req, res) => {
     Breed.findAll({
-        // attributes: [
-        //     'id',
-        //     'breed_name',
-        //     'height_min',
-        //     'height_max',
-        //     'weight_min',
-        //     'weight_max',
-        //     // 'level_id',
-        // ],
         order: [['breed_name', 'ASC']],
         include: [
             {
@@ -58,10 +49,10 @@ router.get('/:id', (req, res) => {
                 model: Color,
                 attributes: ['color_name']
             },
-            {
-                model: Level,
-                attributes: ['level_name']
-            },
+            // {
+            //     model: Level,
+            //     attributes: ['level_name']
+            // },
             {
                 model: Health,
                 attributes: ['health_name', 'description']
@@ -70,14 +61,14 @@ router.get('/:id', (req, res) => {
                 model: Traits,
                 attributes: ['traits_name']
             },
-            {
-                model: Post,
-                attributes: ['id', 'title'],
-                include: {
-                    model: User,
-                    attributes: ['username']
-                }
-            }
+            // {
+            //     model: Post,
+            //     attributes: ['id', 'title'],
+            //     include: {
+            //         model: User,
+            //         attributes: ['username']
+            //     }
+            // }
         ]
     }).then(dbBreedData => {
         if (!dbBreedData) {
@@ -99,8 +90,8 @@ router.post('/', (req, res) => {
         height_min: req.body.height_min,
         height_max: req.body.height_max,
         weight_min: req.body.weight_min,
-        weigth_max: req.body.weight_max,
-        level_id: req.body.level_id,
+        weight_max: req.body.weight_max,
+        // level_id: req.body.level_id,
     })
     .then(dbBreedData => res.json(dbBreedData))
     .catch(err => {

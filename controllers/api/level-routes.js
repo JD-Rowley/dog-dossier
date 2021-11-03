@@ -12,9 +12,10 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     Level.findOne({
-        id: req.params.id
-    })
-    .then(dbLevelData => {
+        where: {
+            id: req.params.id
+        }
+    }).then(dbLevelData => {
         if (!dbLevelData) {
             res.status(404).json({ message: 'No level data for this id' });
             return;

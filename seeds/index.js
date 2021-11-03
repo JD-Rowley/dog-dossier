@@ -36,14 +36,14 @@ const seedAll = async () => {
   await seedBreeds();
   console.log('\n----- BREEDS SEEDED -----\n');
 
-  await seedBreedColors();
-  console.log('\n----- BREEDCOLORS SEEDED -----\n');
-
   await seedBreedHealth();
   console.log('\n----- BREEDHEALTH SEEDED -----\n');
 
   await seedBreedTraits();
   console.log('\n----- BREEDTRAITS SEEDED -----\n');
+  
+  await seedBreedColors();
+  console.log('\n----- BREEDCOLORS SEEDED -----\n');
 
   process.exit(0);
 };

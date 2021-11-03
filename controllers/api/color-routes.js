@@ -12,7 +12,9 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     Color.findOne({
-        id: req.params.id
+        where: {
+            id: req.params.id
+        }
     })
     .then(dbColorData => {
         if (!dbColorData) {

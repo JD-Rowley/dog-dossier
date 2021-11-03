@@ -35,7 +35,7 @@ Breed.init(
             type: DataTypes.INTEGER,
             allowNull: false, 
             validate: {
-                min: 5,
+                min: 3,
                 max: 150
             }
         },
@@ -50,7 +50,6 @@ Breed.init(
         // level_id: {
         //     type: DataTypes.INTEGER,
         //     allowNull: false,
-        //     defaultValue: 1,
         //     reference: {
         //         model: 'level',
         //         key: 'id'

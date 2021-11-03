@@ -44,34 +44,6 @@ const healthData = [
   {
     health_name: 'heart murmurs',
     description: 'disturbance in the blood flow through the chambers of the heart.'
-  },
-  {
-    health_name: '',
-    description: ''
-  },
-  {
-    health_name: '',
-    description: ''
-  },
-  {
-    health_name: '',
-    description: ''
-  },
-  {
-    health_name: '',
-    description: ''
-  },
-  {
-    health_name: '',
-    description: ''
-  },
-  {
-    health_name: '',
-    description: ''
-  },
-  {
-    health_name: '',
-    description: ''
   }
 ];
 
