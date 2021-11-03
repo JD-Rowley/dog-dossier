@@ -6,6 +6,6 @@
         {{post_body}}
     </div>
     <div class="d-flex justify-content-end border-top p-1 px-5">
-        <span class="d-flex col-7 justify-content-end"><p>Posted by <b>{{user.username}}</b> on {{created_at}}</p></span>
+        <span class="d-flex col-7 justify-content-end"><p>Posted by <b>{{user.username}}</b> on {{format_date created_at}} at {{format_time created_at}}</p></span>
     </div>
 </article>

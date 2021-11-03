@@ -2,7 +2,7 @@
     <div class="col-4 p-3">
         <div class="row img-container">
             <div class="">
-                <img src="./assets/images/husky-g317617543_640.jpg" alt="">
+                {{!-- <img src="./assets/images/husky-g317617543_640.jpg" alt=""> --}}
             </div>
         </div>
 
@@ -27,19 +27,27 @@
 
     <div class="col-4 p-3">
         <div class="row align-items-center ">
-            <h1 class="yellow-text xl-text">{{breed_name}}</h1>
+            <h1 class="yellow-text xl-text results-text">{{breed_name}}</h1>
         </div>
         <div class="row ">
             <p class="xs-text breed-info">
-                Height: {{height_min}} - {{height_max}}
+                <b>Height: </b>{{height_min}} - {{height_max}} inches
                 <br>
-                Weight: {{weight_min}} - {{weight_max}}
+                <b>Weight: </b>{{weight_min}} - {{weight_max}} lbs
                 <br>
-                Health Concerns: {{health.health_name}} - {{health.description}}
+                {{#each health}}
+                <b>Health Concerns: </b>{{health_name}} 
+                <br> 
+                {{description}}
+                {{/each}}
                 <br>
-                Personality Traits: {{traits.traits_name}}
+                {{#each traits}}
+                <b>Personality Traits: </b>{{traits_name}}
+                {{/each}}
                 <br>
-                Level: {{level.level_name}}
+                {{#each level}}
+                <b>Level: </b>{{level_name}}
+                {{/each}}
             </p>
         </div>
         <div class="row yellow-text md-text results-text ">
@@ -55,9 +63,9 @@
         <div class="row">
             <div id="scrolling-posts" class="col-8">
                 <ol>
-                    {{#each posts}}
+                    {{#each posts as |post|}}
                     <li>
-                        {{> single-post}}
+                        {{> single-post post}}
                     </li>
                     {{/each}}
                 </ol>

@@ -2,11 +2,8 @@ const express = require('express');
 // import sequelize connection
 const sequelize = require('./config/connection');
 const exphbs = require('express-handlebars');
-const hbs = exphbs.create({ helpers: {
-  loggedIn: function() {
-    return this.loggedIn;
-  }}
-});
+const helpers = require('./utils/helpers');
+const hbs = exphbs.create({ helpers });
 const path = require('path');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
