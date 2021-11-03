@@ -4,8 +4,9 @@
     </div>
     <div>
         <ol>
+            {{#each posts}}
             <li>
-                <article class="card mx-5">
+                <article class="card mx-5 my-3 posts">
                     <div class="card-header d-flex flex-wrap align-items-center card-title">
                         <span class="d-flex col-5 text-decoration-none"><a href="/post/{{id}}" class="text-decoration-none"><h3>{{title}}</h3></a></span>
                     </div>
@@ -13,10 +14,11 @@
                         {{post_body}}
                     </div>
                     <div class="card-footer d-flex justify-content-end p-1 px-3 card-end">
-                        <span class="d-flex col-7 justify-content-end">Posted by {{user.username}} on {{created_at}} at {{created_at}}</span>
+                        <span class="d-flex col-7 justify-content-end">Posted by <b>{{user.username}}</b> on {{created_at}}</span>
                     </div>
                 </article>
             </li>
+            {{/each}}
         </ol>
     </div>
 </div>

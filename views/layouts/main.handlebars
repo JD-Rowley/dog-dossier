@@ -25,9 +25,12 @@
                 <a href="/search" class="nav-item nav-btns m-3 text-decoration-none">Search Breeds</a>
                 <a href="/posts" class="nav-item nav-btns m-3 text-decoration-none">Posts</a>
                 <a href="/contact" class="nav-item nav-btns m-3 text-decoration-none">Contact</a>
+                {{#if loggedIn}}
                 <a href="/dashboard" class="nav-item nav-btns m-3 text-decoration-none">Dashboard</a>
                 <button id="logout" class="nav-item nav-btns btn">Logout</button>
+                {{else}}
                 <a href="/login" class="nav-item nav-btns m-3 text-decoration-none">Login</a>
+                {{/if}}
             </ul>
         </header>
         <main class="container-fluid p-0">
@@ -42,6 +45,8 @@
             </ul>
         </footer>
     </div>
+    {{#if loggedIn}}
     <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 </html>

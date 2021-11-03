@@ -123,3 +123,7 @@ header ul li a {
 .card-end {
     background-color: var(--secondary);
 }
+
+.post-main {
+    font-family: Arial, Helvetica, sans-serif;
+}
