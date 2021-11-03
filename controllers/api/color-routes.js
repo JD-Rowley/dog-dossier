@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const { Traits } = require('../../models');
+const { Color } = require('../../models');
 
 router.get('/', (req, res) => {
-    Traits.findAll()
-        .then(dbTraitsData => res.json(dbTraitsData))
+    Color.findAll()
+        .then(dbColorData => res.json(dbColorData))
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
@@ -11,15 +11,15 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-    Traits.findOne({
+    Color.findOne({
         id: req.params.id
     })
-    .then(dbTraitsData => {
-        if (!dbTraitsData) {
-            res.status(404).json({ message: 'No trait data for this id' });
+    .then(dbColorData => {
+        if (!dbColorData) {
+            res.status(404).json({ message: 'No color data for this id' });
             return;
         }
-        res.json(dbTraitsData)
+        res.json(dbColorData)
     })
     .catch(err => {
         console.log(err);
@@ -28,10 +28,10 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    Traits.create({
-        traits_name: req.body.traits_name
+    Color.create({
+        color_name: req.body.color_name
     })
-    .then(dbTraitsData => res.json(dbTraitsData))
+    .then(dbColorData => res.json(dbColorData))
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
@@ -39,16 +39,16 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-    Traits.update(req.body, {
+    Color.update(req.body, {
         where: {
             id: req.params.id
         }
-    }).then(dbTraitsData => {
-        if (!dbTraitsData) {
-            res.status(404).json({ message: 'No trait data for this id' });
+    }).then(dbColorData => {
+        if (!dbColorData) {
+            res.status(404).json({ message: 'No color data for this id' });
             return;
         }
-        res.json(dbTraitsData);
+        res.json(dbColorData);
     })
     .catch(err => {
         console.log(err);
@@ -57,16 +57,16 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-    Traits.destroy({
+    Color.destroy({
         where: {
             id: req.params.id
         }
-    }).then(dbTraitsData => {
-        if (!dbTraitsData) {
-            res.status(404).json({ message: 'No trait data for this id' });
+    }).then(dbColorData => {
+        if (!dbColorData) {
+            res.status(404).json({ message: 'No color data for this id' });
             return;
         }
-        res.json(dbTraitsData)
+        res.json(dbColorData)
     })
     .catch(err => {
         console.log(err);

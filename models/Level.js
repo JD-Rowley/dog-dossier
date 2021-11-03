@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require("sequelize/types");
+const { Model, DataTypes } = require("sequelize");
 const sequelize = require('../config/connection');
 
 class Level extends Model{}
@@ -12,7 +12,7 @@ Level.init(
             autoIncrement: true
         },
         level_name: {
-            type: DataTypes.STRING(10),
+            type: DataTypes.STRING,
             allowNull: false
         }
     },

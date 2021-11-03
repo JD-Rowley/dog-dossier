@@ -1,9 +1,9 @@
-const { Model, DataTypes } = require("sequelize/types");
+const { Model, DataTypes } = require("sequelize");
 const sequelize = require('../config/connection');
 
-class Health extends Model{}
+class Post extends Model{}
 
-Health.init(
+Post.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,13 +11,20 @@ Health.init(
             primaryKey: true,
             autoIncrement: true
         },
-        health_name: {
+        title: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        description: {
-            type: DataTypes.STRING(150),
+        post_body: {
+            type: DataTypes.STRING(2000),
             allowNull: false
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id'
+            }
         }
     },
     {
@@ -25,8 +32,8 @@ Health.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'health'
+        modelName: 'post'
     }
 );
 
-module.exports = Health;
+module.exports = Post;

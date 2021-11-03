@@ -9,7 +9,8 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(routes);
+// use routes in controllers directory
+app.use(require('./controllers'));
 
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
