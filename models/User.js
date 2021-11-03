@@ -4,9 +4,9 @@ const simplecrypt = require('simplecrypt');
 const sc = simplecrypt();
 
 class User extends Model {
-    checkPassword(loginPw) {
-        return bcrypt.compareSync(loginPw, this.password);
-    }
+    // checkPassword(loginPw) {
+    //     return sc.decrypt(loginPw);
+    // }
 }
 
 // define table columns and config

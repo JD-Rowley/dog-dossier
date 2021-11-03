@@ -8,7 +8,6 @@
 
 * {
     font-family: 'Amatic SC', cursive;
-    color: white;
 }
 
 .bg-img {
@@ -83,8 +82,13 @@ header ul li a {
     color: var(--background);
 }
 
-.forms {
+.forms,
+.posts {
     background-color: var(--background);
+}
+
+.forms {
+    height: 68vh;
 }
 
 .form-text {
@@ -107,5 +111,15 @@ header ul li a {
 }
 
 .submit:hover {
+    background-color: var(--secondary);
+}
+
+.page-title {
+    color: var(--text);
+    font-size: 72px;
+}
+
+.card-title,
+.card-end {
     background-color: var(--secondary);
 }
