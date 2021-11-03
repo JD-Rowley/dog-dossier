@@ -8,6 +8,43 @@
 
 * {
     font-family: 'Amatic SC', cursive;
+    color: white;
+    text-align: center;
+}
+
+
+.yellow-text {
+    color: var(--text);
+    
+
+}
+
+.xl-text {
+    font-size: 18vh;
+    font-weight: bolder;
+    text-shadow: 5px 5px 5px black;
+}
+
+.lg-text {
+    font-size: 10vh;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px black;
+}
+
+.md-text {
+    font-size: 5vh;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px black;
+
+}
+
+.sm-text {
+    font-size: 3.5vh;
+    text-shadow: 2px 2px 2px black;
+}
+
+.xs-text {
+    font-size: 2.5vh;
 }
 
 .bg-img {
@@ -17,10 +54,49 @@
     background-position: center;
 }
 
+.bg-2 {
+    background: var(--secondary);
+    background-size: cover;
+}
+
+.breed-info {
+    text-align: start;
+    padding: 0 0 0 25px;
+}
+
+.button {
+    border-radius: 5px;
+    font-size: 3.5vh;
+    border: none;
+    color: gray;
+    font-weight: bolder;
+}
+
+.label {
+    padding: 0 15px;
+}
+
+.icon {
+    color:var(--primary);
+    text-shadow: 2px 2px 2px black;
+}
+
+.input {
+    border: 1px var(--border);
+    border-radius: 10px;
+}
+
+.img-container {
+    background: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    padding: 15px;
+    margin: 10px;
+}
+
 .hero h1 {
     color: var(--text);
     text-shadow: 5px 5px 5px  black;
-    text-align: center;
     font-size: 18vh;
     font-weight: bolder;
     
@@ -30,7 +106,6 @@
 .hero h2 {
     color:gray ;
     text-shadow: 2px 2px 2px  black;
-    text-align: center;
     font-size: 4.5vh;
     font-weight: bold;
     position: relative;
