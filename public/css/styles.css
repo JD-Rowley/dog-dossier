@@ -91,6 +91,7 @@
     border: 1px solid var(--border);
     border-radius: 25px;
     padding: 15px;
+    margin: 10px;
 }
 
 .hero h1 {
