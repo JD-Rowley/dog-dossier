@@ -48,31 +48,37 @@
 
         <!--Hero-->
 
-        <div class="hero ">
-            <div class="container-fluid bg-img">
-                <div class="container search-modal">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-3">
-                            <h2 class="find-breed">Find<br>Your<br>Breed</h2>
-                        </div>
-                        <div class="col-6">
-                            <div>
-                                <form class="row search-form">
-                                    <div class="col-8">
-                                        <p>Hmm...It looks like we don’t have any information <br> about that breed. Would you like to add it to the system?</p>
-                                        <form action="/action_page.php">
-                                            <input type="checkbox" id="Yes" name="Yes" value="Yes">
-                                            <label for="Yes"> Yes</label><br>
-                                            <input type="checkbox" id="No" name="No" value="NO">
-                                            <label for="No"> No</label><br>
-                                    </div>
-                                    <div class="col-4">
-                                        <button type="button" class="search-button">Search</button>
-                                    </form>
-                                    </div>
-                                </form>
+        <div class="container search-modal">
+            <div class="row d-flex align-items-center">
+                <div class="col-3">
+                    <h2 class="find-breed">Find<br>Your<br>Breed</h2>
+                </div>
+                <div class="col-6">
+                    <div>
+                        <form class="row search-form">
+                            <div class="col-8">
+                                <label for="breed-input">Breed</label>
+                                <input class="text-input" type="text" id="breed-input">
+                                <br>
+                                <label for="traits-input">height</label>
+                                <input class="text-input" type="text" id="height-input">
+                                <br>
+                                <label for="level-input">Weight</label>
+                                <input class="text-input" type="text" id="height-input">
+                                <br>
+                                <label for="level-input">Color</label>
+                                <input class="text-input" type="text" id="color-input">
+                                <br>
+                                <label for="level-input">Health</label>
+                                <input class="text-input" type="text" id="health-input">
+                                <br>
+                                <label for="level-input">Traits</label>
+                                <input class="text-input" type="text" id="traits-input">
                             </div>
-                        </div>
+                            <div class="col-4">
+                                <button type="button" class="search-button">Add Breed</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <!-- <h1 class="display-1 justify-content-center">Dog Dossier</h1>
