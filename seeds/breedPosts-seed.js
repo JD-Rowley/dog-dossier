@@ -293,22 +293,14 @@ const breedPostData = [
     //     breed_id: 51,
     //     post_id: 31
     // },
-    // {
-    //     breed_id: 52,
-    //     post_id: 31
-    // },
-    // {
-    //     breed_id: 53,
-    //     post_id: 1
-    // },
-    // {
-    //     breed_id: 53,
-    //     post_id: 3
-    // },
-    // {
-    //     breed_id: 53,
-    //     post_id: 7
-    // }
+    {
+        breed_id: 52,
+        post_id: 6
+    },
+    {
+        breed_id: 52,
+        post_id: 7
+    }
 ];
 
 const seedBreedPosts = () => BreedPosts.bulkCreate(breedPostData);

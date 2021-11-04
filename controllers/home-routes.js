@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { User, Post, Breed, Color, Health, Traits } = require('../models');
+const { User, Post, Breed, Color, Health, Traits, Level } = require('../models');
 
 router.get('/', (req, res) => {
     console.log(req.session);
@@ -58,16 +58,17 @@ router.get('/results/:id', (req, res) => {
             'height_max',
             'weight_min',
             'weight_max',
+            'level_id'
         ],
         include: [
             {
                 model: Color,
                 attributes: ['color_name']
             },
-            // {
-            //     model: 'level',
-            //     attributes: ['level_name']
-            // },
+            {
+                model: Level,
+                attributes: ['level_name']
+            },
             {
                 model: Health,
                 attributes: ['health_name', 'description']

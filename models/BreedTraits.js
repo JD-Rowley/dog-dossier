@@ -18,7 +18,7 @@ BreedTraits.init(
                 key: 'id'
             }
         },
-        traits_id: {
+        trait_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'traits',

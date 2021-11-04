@@ -47,14 +47,14 @@ Breed.init(
                 max: 200
             }
         },
-        // level_id: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false,
-        //     reference: {
-        //         model: 'level',
-        //         key: 'id'
-        //     }
-        // }
+        level_id: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            reference: {
+                model: 'level',
+                key: 'id'
+            }
+        }
     },
     {
         sequelize,

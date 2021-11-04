@@ -4,109 +4,38 @@ const postData = [
   {
     title: 'Test',
     post_body: 'lorem ipsum',
-    user_id: '1'
+    user_id: 1
   },
   {
     title: 'Test',
     post_body: 'lorem ipsum',
-    user_id: '1'
+    user_id: 1
   },
   {
     title: 'Test',
     post_body: 'lorem ipsum',
-    user_id: '1'
+    user_id: 1
   },
   {
     title: 'Test',
     post_body: 'lorem ipsum',
-    user_id: '1'
+    user_id: 1
   },
   {
     title: 'Test',
     post_body: 'lorem ipsum',
-    user_id: '1'
+    user_id: 1
   },
-//   {
-//     color_name: 'blue merle'
-//   },
-//   {
-//     color_name: 'brown'
-//   },
-//   {
-//     color_name: 'spotted'
-//   },
-//   {
-//     color_name: 'leopard'
-//   },
-//   {
-//     color_name: 'cream'
-//   },
-//   {
-//     color_name: 'rust'
-//   },
-//   {
-//     color_name: 'blue'
-//   },
-//   {
-//     color_name: 'apricot'
-//   },
-//   {
-//     color_name: 'fawn'
-//   },
-//   {
-//     color_name: 'red'
-//   },
-//   {
-//     color_name: 'silver'
-//   },
-//   {
-//     color_name: 'chestnut'
-//   },
-//   {
-//     color_name: 'beige'
-//   },
-//   {
-//     color_name: 'gold'
-//   },
-//   {
-//     color_name: 'light brown'
-//   },
-//   {
-//     color_name: 'yellow'
-//   },
-//   {
-//     color_name: 'gray'
-//   },
-//   {
-//     color_name: 'wheaten'
-//   },
-//   {
-//     color_name: 'orange'
-//   },
-//   {
-//     color_name: 'lilac'
-//   },
-//   {
-//     color_name: 'brindle'
-//   },
-//   {
-//     color_name: 'tri-color'
-//   },
-//   {
-//     color_name: 'white & red'
-//   },
-//   {
-//     color_name: 'white & blue'
-//   },
-//   {
-//     color_name: 'silver & black'
-//   },
-//   {
-//     color_name: 'white & tan'
-//   },
-//   {
-//     color_name: 'white & black'
-//   }
+  {
+    title: 'Ear problems',
+    post_body: 'I noticed my catahoulas have bad ear problems. Probiotics have been helping. Has anyone else experienced this?',
+    user_id: 3
+  },
+  {
+    title: 'Jumping',
+    post_body: 'How high can your catahoula jump? Mine clears our 6 foot fence!',
+    user_id: 1
+  }
 ];
 
 const seedPosts = () => Post.bulkCreate(postData);

@@ -42,13 +42,13 @@ Traits.belongsToMany(Breed, {
     // foreignKey: 'traits_id'
 });
 
-// Level.hasMany(Breed, {
-//     foreignKey: 'level_id'
-// });
+Level.hasMany(Breed, {
+    foreignKey: 'level_id'
+});
 
-// Breed.hasOne(Level, {
-//     foreignKey: 'id'
-// })
+Breed.belongsTo(Level, {
+    foreignKey: 'level_id'
+});
 
 Breed.belongsToMany(Post, {
     through: 'breedPosts',

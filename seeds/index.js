@@ -8,8 +8,10 @@ const seedUsers = require('./user-seed');
 const seedBreedColors = require('./breedColor-seed');
 const seedBreedHealth = require('./breedHealth-seed');
 const seedBreedTraits = require('./breedTrait-seed');
+const seedBreedPosts = require('./breedPosts-seed');
 
 const sequelize = require('../config/connection');
+
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
@@ -21,8 +23,8 @@ const seedAll = async () => {
   await seedHealth();
   console.log('\n----- HEALTH SEEDED -----\n');
 
-  // await seedLevels();
-  // console.log('\n----- LEVELS SEEDED -----\n');
+  await seedLevels();
+  console.log('\n----- LEVELS SEEDED -----\n');
 
   await seedTraits();
   console.log('\n----- TRAITS SEEDED -----\n');
@@ -41,9 +43,12 @@ const seedAll = async () => {
 
   await seedBreedTraits();
   console.log('\n----- BREEDTRAITS SEEDED -----\n');
-  
+
   await seedBreedColors();
   console.log('\n----- BREEDCOLORS SEEDED -----\n');
+
+  await seedBreedPosts();
+  console.log('\n----- BREEDPOSTS SEEDED -----\n');
 
   process.exit(0);
 };

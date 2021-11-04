@@ -289,26 +289,18 @@ const breedColorData = [
         breed_id: 50,
         color_id: 4
     },
-    // {
-    //     breed_id: 51,
-    //     color_id: 31
-    // },
-    // {
-    //     breed_id: 52,
-    //     color_id: 31
-    // },
-    // {
-    //     breed_id: 53,
-    //     color_id: 1
-    // },
-    // {
-    //     breed_id: 53,
-    //     color_id: 3
-    // },
-    // {
-    //     breed_id: 53,
-    //     color_id: 7
-    // }
+    {
+        breed_id: 51,
+        color_id: 31
+    },
+    {
+        breed_id: 52,
+        color_id: 6
+    },
+    {
+        breed_id: 52,
+        color_id: 9
+    }
 ];
 
 const seedBreedColors = () => BreedColor.bulkCreate(breedColorData);
