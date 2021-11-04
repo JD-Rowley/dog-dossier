@@ -8,6 +8,42 @@
 
 * {
     font-family: 'Amatic SC', cursive;
+    color: white;
+}
+
+
+.yellow-text {
+    color: var(--text);
+    
+
+}
+
+.xl-text {
+    font-size: 18vh;
+    font-weight: bolder;
+    text-shadow: 5px 5px 5px black;
+}
+
+.lg-text {
+    font-size: 10vh;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px black;
+}
+
+.md-text {
+    font-size: 5vh;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px black;
+
+}
+
+.sm-text {
+    font-size: 3.5vh;
+    text-shadow: 2px 2px 2px black;
+}
+
+.xs-text {
+    font-size: 2.5vh;
 }
 
 .bg-img {
@@ -17,20 +53,61 @@
     background-position: center;
 }
 
+.bg-2 {
+    background: var(--secondary);
+    background-size: cover;
+}
+
+.breed-info {
+    text-align: start;
+    padding: 0 0 0 25px;
+}
+
+.button {
+    border-radius: 5px;
+    font-size: 3.5vh;
+    border: none;
+    color: gray;
+    font-weight: bolder;
+}
+
+.label {
+    padding: 0 15px;
+}
+
+.icon {
+    color:var(--primary);
+    text-shadow: 2px 2px 2px black;
+}
+
+.input {
+    border: 1px var(--border);
+    border-radius: 10px;
+}
+
+.img-container {
+    background: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    padding: 15px;
+    margin: 10px;
+}
+
+.hero {
+    text-align: center;
+}
+
 .hero h1 {
     color: var(--text);
     text-shadow: 5px 5px 5px  black;
-    text-align: center;
     font-size: 18vh;
     font-weight: bolder;
-    
    
 }
 
 .hero h2 {
     color:gray ;
     text-shadow: 2px 2px 2px  black;
-    text-align: center;
     font-size: 4.5vh;
     font-weight: bold;
     position: relative;
@@ -43,7 +120,7 @@
     justify-content: space-between;
     align-items: center;
     height: 25vh;
-    
+    text-align: center;
 }
 
 .about h2 {
@@ -82,12 +159,12 @@ header ul li a {
     color: var(--background);
 }
 
-.forms,
 .posts {
-    background-color: var(--background);
+    background-color: var(--secondary);
 }
 
 .forms {
+    background-color: var(--background);
     height: 68vh;
 }
 
@@ -126,4 +203,14 @@ header ul li a {
 
 .post-main {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.results-text {
+    text-align: center;
+}
+
+#scrolling-posts {
+    height: 400px;
+    width: 400px;
+    overflow-y: auto;
 }
