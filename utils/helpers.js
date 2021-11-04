@@ -12,4 +12,4 @@ module.exports = {
     loggedIn: function() {
         return this.loggedIn;
     }
-}
+};

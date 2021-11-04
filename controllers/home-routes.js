@@ -17,7 +17,18 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/search', (req, res) => {
-    res.render('modal-search');
+    Breed.findAll({
+        order: [['breed_name', 'ASC']],
+        attributes: ['breed_name']
+    }).then(dbBreedData => {
+        const breeds = dbBreedData.map(breed => breed.get({ plain: true }));
+
+        res.render('modal-search', { breeds });
+    })
+    .catch(err => {
+        console.log(err);
+        res.json(500).json(err);
+    });
 });
 
 router.get('/posts', (req, res) => {
