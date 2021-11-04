@@ -12,7 +12,7 @@
 }
 .bg-img {
     height: 50vh;
-    background:linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.3)), url(./assets/images/dogs-g6199740f8_1920.jpg);
+    background:linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.3)), url(./images/dogs-g6199740f8_1920.jpg);
     background-size:cover;
     background-position: center;
 }
@@ -28,13 +28,29 @@
    
 }
 
-.hero h2 {
+.hero h3 {
     color:gray ;
     text-shadow: 2px 2px 2px  black;
     text-align: center;
     font-size: 4.5vh;
     font-weight: bold;
     position: relative;
+}
+
+.search-button {
+    font-size: 8vh;
+    color: var(--text);
+    text-align: center;
+    text-shadow: 3px 3px 3px black;
+    margin-top: 2.5px;
+    background-color: var(--secondary);
+    border: 1px white;
+}
+
+.search-form {
+    background-color: var(--secondary);
+    border: 3px solid white;
+    border-radius: 5px;
 }
 
 .about {
@@ -64,6 +80,48 @@
     
 }
 
+.contact {
+    background-color: var(--primary);
+    border-bottom: 1px solid white;
+    height: 200px;
+
+}
+
+.contact h2 {
+    font-size: 13vh;
+    color: var(--text);
+    font-weight: bold;
+    text-shadow: 5px 5px 5px black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact h3 {
+    text-align: center;
+    margin-top: 45px;
+    font-weight: bold;
+}
+
+.contact p {
+    font-size: 3.5vh;
+    margin-top: 41.5px;
+    font-weight: bold;
+}
+
+.contact iframe {
+    margin-top: 25px;
+    border: 2px solid white;
+}
+
+.find-breed {
+    font-size: 10vh;
+    color: var(--text);
+    font-weight: bold;
+    text-shadow: 5px 5px 5px black;
+    margin-top: 50px;
+
+}
+
 header, footer {
     background-color: var(--primary);
 }
@@ -81,4 +139,13 @@ header ul li a {
 .nav-btns {
     font-size:3.5vh;
     color: var(--background);
+}
+
+label {
+    font-size: 3vh;
+}
+
+input {
+    width: 50%;
+    border-radius: 5.5px;
 }
