@@ -5,9 +5,11 @@ const Level = require('./Level');
 const Traits = require('./Traits');
 const BreedColor = require('./BreedColor');
 const BreedHealth = require('./BreedHealth');
+const BreedPosts = require('./BreedPosts')
 const BreedTraits = require('./BreedTraits');
 const User = require('./User');
 const Post = require('./Post');
+const { belongsToMany } = require('./Breed');
 
 // associations
 Breed.belongsToMany(Color, {
@@ -48,6 +50,16 @@ Traits.belongsToMany(Breed, {
 //     foreignKey: 'id'
 // })
 
+Breed.belongsToMany(Post, {
+    through: 'breedPosts',
+    foreignKey: 'post_id'
+})
+
+Post.belongsToMany(Breed, {
+    through: 'breedPosts',
+    foreignKey: 'post_id'
+})
+
 User.hasMany(Post, {
     foreignKey: 'user_id'
 });
@@ -56,4 +68,4 @@ Post.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-module.exports = { Breed, Color, Health, Level, Traits, BreedColor, BreedHealth, BreedTraits, User, Post };
+module.exports = { Breed, Color, Health, Level, Traits, BreedColor, BreedHealth, BreedPosts, BreedTraits, User, Post };

@@ -210,7 +210,7 @@ header ul li a {
 }
 
 #scrolling-posts {
-    height: 400px;
-    width: 400px;
+    height: 40vh;
+    width: 30vw;
     overflow-y: auto;
 }

@@ -24,14 +24,14 @@ const seedAll = async () => {
   // await seedLevels();
   // console.log('\n----- LEVELS SEEDED -----\n');
 
-  // await seedPosts();
-  // console.log('\n----- POSTS SEEDED -----\n');
-
   await seedTraits();
   console.log('\n----- TRAITS SEEDED -----\n');
 
-  // await seedUsers();
-  // console.log('\n----- USERS SEEDED -----\n');
+  await seedUsers();
+  console.log('\n----- USERS SEEDED -----\n');
+
+  await seedPosts();
+  console.log('\n----- POSTS SEEDED -----\n');
 
   await seedBreeds();
   console.log('\n----- BREEDS SEEDED -----\n');
