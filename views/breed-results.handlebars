@@ -35,19 +35,13 @@
                 <br>
                 <b>Weight: </b>{{weight_min}} - {{weight_max}} lbs
                 <br>
-                {{#each health}}
-                <b>Health Concerns: </b>{{health_name}} 
+                <b>Health Concerns: </b>{{health.health_name}} 
                 <br> 
-                {{description}}
-                {{/each}}
+                {{health.description}}
                 <br>
-                {{#each traits}}
-                <b>Personality Traits: </b>{{traits_name}}
-                {{/each}}
+                <b>Personality Traits: </b>{{traits.traits_name}}
                 <br>
-                {{#each level}}
-                <b>Level: </b>{{level_name}}
-                {{/each}}
+                <b>Level: </b>{{level.level_name}}
             </p>
         </div>
         <div class="row yellow-text md-text results-text ">
@@ -63,9 +57,9 @@
         <div class="row">
             <div id="scrolling-posts" class="col-8">
                 <ol>
-                    {{#each posts as |post|}}
+                    {{#each posts}}
                     <li>
-                        {{> single-post post}}
+                        {{> single-post}}
                     </li>
                     {{/each}}
                 </ol>
