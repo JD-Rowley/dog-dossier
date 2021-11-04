@@ -29,22 +29,22 @@ const breedHealthData = [
         breed_id: 7,
         health_id: 3
     },
-    // {
-    //     breed_id: 8,
-    //     health_id: 10
-    // },
-    // {
-    //     breed_id: 9,
-    //     health_id: 6
-    // },
-    // {
-    //     breed_id: 10,
-    //     health_id: 11
-    // },
-    // {
-    //     breed_id: 11,
-    //     health_id: 1
-    // },
+    {
+        breed_id: 8,
+        health_id: 10
+    },
+    {
+        breed_id: 9,
+        health_id: 6
+    },
+    {
+        breed_id: 10,
+        health_id: 11
+    },
+    {
+        breed_id: 11,
+        health_id: 2
+    },
     // {
     //     breed_id: 12,
     //     health_id: 2

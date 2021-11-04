@@ -14,32 +14,32 @@ const { belongsToMany } = require('./Breed');
 // associations
 Breed.belongsToMany(Color, {
     through: 'breedColor',
-    foreignKey: 'color_id'
+    // foreignKey: 'color_id'
 });
 
 Color.belongsToMany(Breed, {
     through: 'breedColor',
-    foreignKey: 'color_id'
+    // foreignKey: 'color_id'
 });
 
 Breed.belongsToMany(Health, {
     through: 'breedHealth',
-    foreignKey: 'health_id'
+   // foreignKey: 'health_id',
 });
 
 Health.belongsToMany(Breed, {
     through: 'breedHealth',
-    foreignKey: 'health_id'
+   // foreignKey: 'health_id',
 });
 
 Breed.belongsToMany(Traits, {
     through: 'breedTraits',
-    foreignKey: 'traits_id'
+    // foreignKey: 'traits_id'
 });
 
 Traits.belongsToMany(Breed, {
     through: 'breedTraits',
-    foreignKey: 'traits_id'
+    // foreignKey: 'traits_id'
 });
 
 // Level.hasMany(Breed, {
@@ -52,12 +52,12 @@ Traits.belongsToMany(Breed, {
 
 Breed.belongsToMany(Post, {
     through: 'breedPosts',
-    foreignKey: 'post_id'
+    // foreignKey: 'post_id'
 })
 
 Post.belongsToMany(Breed, {
     through: 'breedPosts',
-    foreignKey: 'post_id'
+    // foreignKey: 'post_id'
 })
 
 User.hasMany(Post, {
