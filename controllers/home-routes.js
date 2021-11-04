@@ -19,7 +19,7 @@ router.get('/login', (req, res) => {
 router.get('/search', (req, res) => {
     Breed.findAll({
         order: [['breed_name', 'ASC']],
-        attributes: ['breed_name']
+        attributes: ['id', 'breed_name']
     }).then(dbBreedData => {
         const breeds = dbBreedData.map(breed => breed.get({ plain: true }));
 
@@ -98,88 +98,6 @@ router.get('/results/:id', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
-    //     res.render('breed-results', {
-    //         id: 1,
-    //         breed_name: 'Airedale Terrier',
-    //         height_min: 21,
-    //         height_max: 23,
-    //         weight_min: 40,
-    //         weight_max: 65,
-    //         colors: [
-    //             {
-    //                 color_name: 'black',
-    //                 breedColor: {
-    //                     id: 1,
-    //                     breed_id: 1,
-    //                     color_id: 1
-    //                 }
-    //             }
-    //         ],
-    //         health: [
-    //             {
-    //                 health_name: 'hip dysplasia',
-    //                 description: 'genetic condition in which the thighbone does not fit properly into the hip joint, can cause pain or lameness.',
-    //                 breedHealth: {
-    //                     id: 2,
-    //                     breed_id: 2,
-    //                     health_id: 1
-    //                 }
-    //             }
-    //         ],
-    //         traits: [
-    //             {
-    //                 traits_name: 'stubborn',
-    //                 breedTraits: {
-    //                     id: 2,
-    //                     breed_id: 2,
-    //                     traits_id: 1
-    //                 }
-    //             }
-    //         ],
-    //         posts: [
-    //             {
-    //                 title: 'Hey You!',
-    //                 post_body: 'lorem ipsum',
-    //                 created_at: "2021-11-04T18:04:12.000Z",
-    //                 user: {
-    //                     username: "jd"
-    //                 }
-    //             },
-    //             {
-    //                 title: 'What is up!',
-    //                 post_body: 'lorem ipsum',
-    //                 created_at: "2021-11-04T18:04:12.000Z",
-    //                 user: {
-    //                     username: "jd"
-    //                 }
-    //             },
-    //             {
-    //                 title: 'Cool!',
-    //                 post_body: 'lorem ipsum',
-    //                 created_at: "2021-11-04T18:04:12.000Z",
-    //                 user: {
-    //                     username: "jd"
-    //                 }
-    //             },
-    //             {
-    //                 title: 'Tubular!',
-    //                 post_body: 'lorem ipsum',
-    //                 created_at: "2021-11-04T18:04:12.000Z",
-    //                 user: {
-    //                     username: "jd"
-    //                 }
-    //             },
-    //             {
-    //                 title: 'Awesome!',
-    //                 post_body: 'lorem ipsum',
-    //                 created_at: "2021-11-04T18:04:12.000Z",
-    //                 user: {
-    //                     username: "jd"
-    //                 }
-    //             },
-    //         ]
-    //     });
-    // })
 });
 
 module.exports = router;
