@@ -14,8 +14,6 @@
 
 .yellow-text {
     color: var(--text);
-    
-
 }
 
 .xl-text {
@@ -213,4 +211,28 @@ header ul li a {
     height: 40vh;
     width: 30vw;
     overflow-y: auto;
+}
+
+.search-form {
+    background-color: var(--secondary);
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+.search-button {
+    font-size: 8vh;
+    color: var(--text);
+    text-align: center;
+    text-shadow: 3px 3px 3px black;
+    margin-top: 2.5px;
+    background-color: var(--secondary);
+    border: 1px white;
+}
+
+.find-breed {
+    font-size: 10vh;
+    color: var(--text);
+    font-weight: bold;
+    text-shadow: 5px 5px 5px black;
+    margin-top: 50px;
 }

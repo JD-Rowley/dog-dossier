@@ -16,6 +16,10 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+router.get('/search', (req, res) => {
+    res.render('modal-search');
+});
+
 router.get('/posts', (req, res) => {
     Post.findAll({
         attributes: [
