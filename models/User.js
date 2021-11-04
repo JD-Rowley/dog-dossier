@@ -1,11 +1,12 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const bcrypt = require('bcrypt');
+const simplecrypt = require('simplecrypt');
+const sc = simplecrypt();
 
 class User extends Model {
-    checkPassword(loginPw) {
-        return bcrypt.compareSync(loginPw, this.password);
-    }
+    // checkPassword(loginPw) {
+    //     return sc.decrypt(loginPw);
+    // }
 }
 
 // define table columns and config
@@ -39,11 +40,11 @@ User.init(
     {
         hooks: {
             async beforeCreate(newUserData) {
-                newUserData.password = await bcrypt.hash(newUserData.password, 10);
+                newUserData.password = await sc.encrypt(newUserData.password);
                 return newUserData;
             },
             async beforeUpdate(updatedUserData) {
-                updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+                updatedUserData.password = await sc.encrypt(updatedUserData.password);
                 return updatedUserData;
             }
         },

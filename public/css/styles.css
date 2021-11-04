@@ -1,0 +1,216 @@
+:root {
+    --primary: #195F6B;
+    --secondary: #16BAC6;
+    --background: #EFF0F4;
+    --border: #112025;
+    --text: #FDC161;
+}
+
+* {
+    font-family: 'Amatic SC', cursive;
+    color: white;
+}
+
+
+.yellow-text {
+    color: var(--text);
+    
+
+}
+
+.xl-text {
+    font-size: 18vh;
+    font-weight: bolder;
+    text-shadow: 5px 5px 5px black;
+}
+
+.lg-text {
+    font-size: 10vh;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px black;
+}
+
+.md-text {
+    font-size: 5vh;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px black;
+
+}
+
+.sm-text {
+    font-size: 3.5vh;
+    text-shadow: 2px 2px 2px black;
+}
+
+.xs-text {
+    font-size: 2.5vh;
+}
+
+.bg-img {
+    height: 50vh;
+    background:linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.3)), url(../img/dogs-g6199740f8_1920.jpg);
+    background-size:cover;
+    background-position: center;
+}
+
+.bg-2 {
+    background: var(--secondary);
+    background-size: cover;
+}
+
+.breed-info {
+    text-align: start;
+    padding: 0 0 0 25px;
+}
+
+.button {
+    border-radius: 5px;
+    font-size: 3.5vh;
+    border: none;
+    color: gray;
+    font-weight: bolder;
+}
+
+.label {
+    padding: 0 15px;
+}
+
+.icon {
+    color:var(--primary);
+    text-shadow: 2px 2px 2px black;
+}
+
+.input {
+    border: 1px var(--border);
+    border-radius: 10px;
+}
+
+.img-container {
+    background: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    padding: 15px;
+    margin: 10px;
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero h1 {
+    color: var(--text);
+    text-shadow: 5px 5px 5px  black;
+    font-size: 18vh;
+    font-weight: bolder;
+   
+}
+
+.hero h2 {
+    color:gray ;
+    text-shadow: 2px 2px 2px  black;
+    font-size: 4.5vh;
+    font-weight: bold;
+    position: relative;
+}
+
+.about {
+    display: flex;
+    background-color: var(--secondary);
+    border: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+    height: 25vh;
+    text-align: center;
+}
+
+.about h2 {
+    color: var(--text);
+    font-size: 10vh;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.about p {
+    font-size: 2vh;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+    
+}
+
+header, footer {
+    background-color: var(--primary);
+}
+
+header ul li a {
+    color: var(--background);
+    text-decoration-color: var(--background);
+}
+
+.home-btn {
+    font-size: 4vh;
+    font-weight:bold;
+}
+
+.nav-btns {
+    font-size:3.5vh;
+    color: var(--background);
+}
+
+.posts {
+    background-color: var(--secondary);
+}
+
+.forms {
+    background-color: var(--background);
+    height: 68vh;
+}
+
+.form-text {
+    color: var(--primary);
+    text-align: end;
+    font-size: 24px;
+    margin-top: 18px;
+}
+
+.text-input {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    width: 35%;
+    border-radius: 5px;
+}
+
+.submit {
+    background-color: var(--primary);
+    border-radius: 5px;
+}
+
+.submit:hover {
+    background-color: var(--secondary);
+}
+
+.page-title {
+    color: var(--text);
+    font-size: 72px;
+}
+
+.card-title,
+.card-end {
+    background-color: var(--secondary);
+}
+
+.post-main {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.results-text {
+    text-align: center;
+}
+
+#scrolling-posts {
+    height: 40vh;
+    width: 30vw;
+    overflow-y: auto;
+}

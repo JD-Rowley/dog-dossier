@@ -1,9 +1,9 @@
-const { Model, DataTypes } = require("sequelize/types");
+const { Model, DataTypes } = require("sequelize");
 const sequelize = require('../config/connection');
 
-class Traits extends Model{}
+class Level extends Model{}
 
-Traits.init(
+Level.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,7 +11,7 @@ Traits.init(
             primaryKey: true,
             autoIncrement: true
         },
-        traits_name: {
+        level_name: {
             type: DataTypes.STRING,
             allowNull: false
         }
@@ -21,8 +21,8 @@ Traits.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'traits'
+        modelName: 'level'
     }
 );
 
-module.exports = Traits;
+module.exports = Level;

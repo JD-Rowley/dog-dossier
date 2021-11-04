@@ -1,0 +1,14 @@
+<div class="row d-flex justify-content-center posts">
+    <div class="col-8">
+        <h2 class="page-title mx-5 my-3">Posts</h2>
+    </div>
+    <div class="col-8">
+        <ol>
+            {{#each posts}}
+            <li>
+                {{> single-post}}
+            </li>
+            {{/each}}
+        </ol>
+    </div>
+</div>
