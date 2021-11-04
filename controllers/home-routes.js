@@ -3,7 +3,6 @@ const sequelize = require('../config/connection');
 const { User, Post, Breed, Color, Health, Traits, Level } = require('../models');
 
 router.get('/', (req, res) => {
-    console.log(req.session);
     res.render('homepage');
 });
 
@@ -91,7 +90,6 @@ router.get('/results/:id', (req, res) => {
         raw: true,
         nest: true
     }).then(dbBreedData => {
-        console.log(dbBreedData);
         res.render('breed-results', dbBreedData);
     })
     .catch(err => {

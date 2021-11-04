@@ -28,8 +28,8 @@
                 <a href="/posts" class="nav-item nav-btns m-3 text-decoration-none">Posts</a>
                 <a href="/contact" class="nav-item nav-btns m-3 text-decoration-none">Contact</a>
                 {{#if loggedIn}}
-                <a href="/dashboard" class="nav-item nav-btns m-3 text-decoration-none">Dashboard</a>
                 <button id="logout" class="nav-item nav-btns btn">Logout</button>
+                {{!-- <p>Logged in as: {{user.username}}</p> --}}
                 {{else}}
                 <a href="/login" class="nav-item nav-btns m-3 text-decoration-none">Login</a>
                 {{/if}}

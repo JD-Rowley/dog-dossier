@@ -67,6 +67,7 @@
         </div>
         <div class="row">
             <h3 class="yellow-text md-text results-text">Post</h3>
+            {{#if loggedIn}}
             <div class="input-group ">
                 <label for="post-title" class="xs-text label">Title</label>
                 <input type="text" class="form-control" id="post-title">
@@ -78,6 +79,11 @@
             <button class="btn btn-outline-secondary button" type="button" id="post-submit">
                 <ion-icon class="icon" name="arrow-round-forward"></ion-icon>
             </button>
+            {{else}}
+            <div class="sm-text results-text">
+                <p><a href="/login" class="text-decoration-none">Login</a> to make a post!</p>
+            </div>
+            {{/if}}
         </div>
     </div>
 </div>
