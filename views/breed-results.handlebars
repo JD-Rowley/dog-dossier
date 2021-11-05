@@ -1,8 +1,11 @@
 <div class="row bg-2 p-3 m-0">
+    <div class="row align-items-center ">
+        <h1 class="yellow-text xl-text results-text">{{breed_name}}</h1>
+    </div>
     <div class="col-4 p-3">
         <div class="row img-container">
-            <div class="">
-                {{!-- <img src="./assets/images/husky-g317617543_640.jpg" alt=""> --}}
+            <div class="dog-pic">
+                <img src="/img/Catahoula-Do-54935585.jpg" alt="">
             </div>
         </div>
         {{#if loggedIn}}
@@ -28,9 +31,6 @@
 
     <div class="col-4 p-3">
         <div class="row ">
-            <div class="row align-items-center ">
-                <h1 class="yellow-text xl-text results-text">{{breed_name}}</h1>
-            </div>
             <p class="xs-text breed-info">
                 <b>Height: </b>{{height_min}} - {{height_max}} inches
                 <br>
