@@ -10,21 +10,23 @@
         </div>
         {{#if loggedIn}}
         <div class="row">
-            <h3 class="yellow-text md-text results-text">Update</h3>
-            <div class="input-group mb-3">
-                <label for="health" class="sm-text label">Health</label>
-                <input type="text" class="form-control" id="health" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary button" type="button" id="button-addon2">
-                    <ion-icon class="icon" name="arrow-round-forward"></ion-icon>
-                </button>
-            </div>
-            <div class="input-group mb-3">
-                <label for="traits" class="sm-text label">Traits</label>
-                <input type="text" class="form-control input" id="traits" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary button" type="button" id="button-addon2">
-                    <ion-icon class="icon" name="arrow-round-forward"></ion-icon>
-                </button>
-            </div>
+            <form class="update-form">
+                <h3 class="yellow-text md-text results-text">Update</h3>
+                <div class="input-group mb-3 update-health">
+                    <label for="health" class="sm-text label">Health</label>
+                    <input type="text" class="form-control" id="health" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary button" type="submit" id="button-addon2">
+                        <ion-icon class="icon" name="arrow-round-forward"></ion-icon>
+                    </button>
+                </div>
+                <div class="input-group mb-3 update-traits">
+                    <label for="traits" class="sm-text label">Traits</label>
+                    <input type="text" class="form-control input" id="traits" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary button" type="submit" id="button-addon2">
+                        <ion-icon class="icon" name="arrow-round-forward"></ion-icon>
+                    </button>
+                </div>
+            </form>
         </div>
         {{/if}}
     </div>
@@ -81,17 +83,19 @@
         <div class="row">
             <h3 class="yellow-text md-text results-text">Post</h3>
             {{#if loggedIn}}
-            <div class="input-group ">
-                <label for="post-title" class="xs-text label">Title</label>
-                <input type="text" class="form-control" id="post-title">
-            </div>
-            <label for="description" class="xs-text label results-text">Description</label>
-            <div>
-                <textarea class="form-control" id="description" cols="2" rows="3"></textarea>
-            </div>
-            <button class="btn btn-outline-secondary button" type="button" id="post-submit">
-                <ion-icon class="icon" name="arrow-round-forward"></ion-icon>
-            </button>
+            <form class="new-post">
+                <div class="input-group ">
+                    <label for="post-title" class="xs-text label">Title</label>
+                    <input type="text" class="form-control" id="post-title">
+                </div>
+                <label for="description" class="xs-text label results-text">Description</label>
+                <div>
+                    <textarea class="form-control" id="description" cols="2" rows="3"></textarea>
+                </div>
+                <button class="btn btn-outline-secondary button" type="submit" id="post-submit">
+                    <ion-icon class="icon" name="arrow-round-forward"></ion-icon>
+                </button>
+            </form>
             {{else}}
             <div class="sm-text results-text">
                 <p><a href="/login" class="text-decoration-none">Login</a> to make a post!</p>
@@ -102,5 +106,6 @@
 </div>
 
 {{#if loggedIn}}
-<script src="./js/add-post.js"></script>
+<script src="/js/add-post.js"></script>
+<script src="/js/update-health-traits.js"></script>
 {{/if}}
