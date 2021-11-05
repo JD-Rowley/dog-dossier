@@ -5,6 +5,8 @@ async function searchFormHandler(event) {
 
     document.location.replace(`/results/${id}`);
 
+    console.log(id);
+
     // const response = await fetch(`api/breeds/${id}`, {
     //     method: 'GET',
     //     body: JSON.stringify({
