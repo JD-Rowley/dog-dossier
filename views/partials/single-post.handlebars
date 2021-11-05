@@ -1,11 +1,11 @@
 <article class="mx-5 my-3">
     <div class="border-bottom px-5">
-        <span class="col-5 text-decoration-none"><a href="/post/{{id}}" class="text-decoration-none"><h3>{{title}}</h3></a></span>
+        <span class="text-decoration-none"><a href="/post/{{id}}" class="text-decoration-none"><h3>{{title}}</h3></a></span>
     </div>
     <div class="text-body post-main m-3" name="post-body">
         {{post_body}}
     </div>
     <div class="d-flex justify-content-end border-top p-1 px-5">
-        <span class="d-flex col-7 justify-content-end"><p>Posted by <b>{{user.username}}</b> on {{format_date created_at}} at {{format_time created_at}}</p></span>
+        <span class="d-flex justify-content-end"><p>Posted by <b>{{user.username}}</b> on {{format_date created_at}} at {{format_time created_at}}</p></span>
     </div>
 </article>

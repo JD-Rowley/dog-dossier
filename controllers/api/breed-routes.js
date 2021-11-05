@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
             },
             {
                 model: Post,
-                attributes: ['id', 'title'],
+                attributes: ['id', 'title', 'post_body', 'created_at'],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -63,7 +63,7 @@ router.get('/:id', (req, res) => {
             },
             {
                 model: Post,
-                attributes: ['id', 'title'],
+                attributes: ['id', 'title', 'post_body', 'created_at'],
                 include: {
                     model: User,
                     attributes: ['username']

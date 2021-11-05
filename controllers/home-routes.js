@@ -87,10 +87,12 @@ router.get('/results/:id', (req, res) => {
                 }
             }
         ],
-        raw: true,
-        nest: true
+        // raw: true,
+        // nest: true
     }).then(dbBreedData => {
-        res.render('breed-results', dbBreedData);
+        const breed = dbBreedData.get({ plain: true });
+        res.render('breed-results', { breed });
+        console.log(breed);
     })
     .catch(err => {
         console.log(err);

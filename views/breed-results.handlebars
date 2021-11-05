@@ -1,6 +1,6 @@
 <div class="row bg-2 p-3 m-0">
     <div class="row align-items-center ">
-        <h1 class="yellow-text xl-text results-text">{{breed_name}}</h1>
+        <h1 class="yellow-text xl-text results-text">{{breed.breed_name}}</h1>
     </div>
     <div class="col-4 p-3">
         <div class="row img-container">
@@ -32,40 +32,56 @@
     <div class="col-4 p-3">
         <div class="row ">
             <p class="xs-text breed-info">
-                <b>Height: </b>{{height_min}} - {{height_max}} inches
+                <b>Height: </b>{{breed.height_min}} - {{breed.height_max}} inches
                 <br>
-                <b>Weight: </b>{{weight_min}} - {{weight_max}} lbs
+                <b>Weight: </b>{{breed.weight_min}} - {{breed.weight_max}} lbs
                 <br>
-                <b>Health Concerns: </b>{{health.health_name}} 
+                {{#each breed.health}}
+                <b>Health Concerns: </b>{{health_name}} 
                 <br> 
-                {{health.description}}
+                {{description}}
                 <br>
-                <b>Personality Traits: </b>{{traits.traits_name}}
+                {{/each}}
+                {{#each breed.traits}}
+                <b>Personality Traits: </b>{{traits_name}}
                 <br>
-                <b>Level: </b>{{level.level_name}}
+                {{/each}}
+                <b>Level: </b>{{breed.level.level_name}}
             </p>
         </div>
         <div class="row yellow-text md-text results-text ">
             <a href="/search" class="text-reset text-decoration-none">Back to Search</a>
-            <a href="/posts" class="text-reset text-decoration-none ">Go to all Posts</a>
+            <a href="/posts" class="text-reset text-decoration-none">Go to all Posts</a>
         </div>
     </div>
 
     <div class="col-4 p-3">
         <div class="row">
-            <h2 class="lg-text results-text">User Posts</h2>
+            <h2 class="lg-text results-text border-bottom">User Posts</h2>
         </div>
+        {{#if breed.posts}}
         <div class="row">
-            <div id="scrolling-posts" class="col-8">
+            <div id="scrolling-posts" class="col-8 my-3">
                 <ol>
-                    {{#each posts}}
+                    {{#each breed.posts}}
                     <li>
-                        {{> single-post}}
+                    <article class="mx-5 my-3">
+                        <div class="border-bottom px-5">
+                            <span class="text-decoration-none"><a href="/post/{{id}}" class="text-decoration-none"><h3>{{title}}</h3></a></span>
+                        </div>
+                        <div class="text-body post-main m-3" name="post-body">
+                            {{post_body}}
+                        </div>
+                        <div class="d-flex justify-content-end border-top p-1 px-5">
+                            <span class="d-flex justify-content-end"><p>Posted by <b>{{user.username}}</b> on {{format_date created_at}} at {{format_time created_at}}</p></span>
+                        </div>
+                    </article>                    
                     </li>
                     {{/each}}
                 </ol>
             </div>
         </div>
+        {{/if}}
         <div class="row">
             <h3 class="yellow-text md-text results-text">Post</h3>
             {{#if loggedIn}}
