@@ -86,13 +86,10 @@ router.get('/results/:id', (req, res) => {
                     attributes: ['username']
                 }
             }
-        ],
-        // raw: true,
-        // nest: true
+        ]
     }).then(dbBreedData => {
         const breed = dbBreedData.get({ plain: true });
         res.render('breed-results', { breed });
-        console.log(breed);
     })
     .catch(err => {
         console.log(err);
