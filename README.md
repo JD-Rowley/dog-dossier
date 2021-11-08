@@ -28,6 +28,8 @@
    * GitHub: [dog-dossier](http://github.com/jd-rowley/dog-dossier)
    * E-mail: jdrowley1989@gmail.com, amber.rain.phillips@gmail.com, tony.slonaker@gmail.com, tylerallison55@gmail.com
 
+/Users/tony/Desktop/projects/project2/dog-dossier/public/img/dog_dossier.png
+
 Click the image to be taken to the URL of the deployed app.
 [![dog dossier](../images/dog_dossier.JPG)](https://the-dog-dossier.herokuapp.com)
 
