@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 async function healthFormHandler(event) {
     event.preventDefault();
 
@@ -10,20 +12,22 @@ async function healthFormHandler(event) {
 
     const response = await fetch(`/api/health/${id}`, {
         method: 'PUT',
+       
+        headers: { 'Content-Type': 'application/json' },
+
         body: JSON.stringify({
             health_name
-        }),
-        headers: { 'Content-Type': 'application/json' }
-    });
+        })
+    }).then(response=>{
+        return response.json()
 
-    // whatever we want the data to do
-    // update the respective table?
-
-    if (response.ok) {
+    }).then(data=>{   
+    if (data) {
         document.location.replace(`/results/${id}`);
     } else {
         alert(response.statusText);
     }
+})
 };
 
 async function traitsFormHandler(event) {
@@ -38,20 +42,23 @@ async function traitsFormHandler(event) {
 
     const response = await fetch(`/api/traits/${id}`, {
         method: 'PUT',
+       
+        headers: { 'Content-Type': 'application/json' },
+
         body: JSON.stringify({
             traits_name
         }),
-        headers: { 'Content-Type': 'application/json' }
-    });
+    }).then(response=>{
+        return response.json()
 
-    // whatever we want the data to do
-    // update the respective table?
+    }).then(data=>{
 
-    if (response.ok) {
+    if (data) {
         document.location.replace(`/results/${id}`);
     } else {
         alert(response.statusText);
     }
+})
 };
 
 document.querySelector('.update-health').addEventListener('submit', healthFormHandler);
