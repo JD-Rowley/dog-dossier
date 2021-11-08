@@ -29,6 +29,6 @@
    * E-mail: jdrowley1989@gmail.com, amber.rain.phillips@gmail.com, tony.slonaker@gmail.com
 
 Click the image to be taken to the URL of the deployed app.
-[![Sample Page Layout](/assets/img/Dog_Dossier.JPG)](heroku.app)
+[![Sample Page Layout](/assets/img/dog_dossier.JPG)](https://the-dog-dossier.herokuapp.com/.app)
 
   
