@@ -14,7 +14,7 @@
   * [Questions](#questions) 
     
   ## Description
-   The app was created so that developers can both publish blog posts, and comment on other posts. The app follows an MVC style structure and    uses Handlebars.js as a template engine. It will use Sequelize as the ORM. Once logged in on the app, users (developers) of this app are      able to read and comment on blog posts. Users (developers) authentication for the app will use the Express-Session npm.
+   Dog Dossier aims to provide helpful breed-specific information for current and future dog owners. This database will retrieve health and      personality traits specific to breed, and also gives users the ability to post personal experiences with those health or trait concerns.
   ## Installation
    First: install the dependencies by running the command: "npm i".
    Second: After dependencies are installed, user must create the .env file. The .env file must include mySQL: database name, user, and          password.
@@ -26,7 +26,7 @@
    Tested with Jest. Any other testing that needs to be performed: Open terminal and enter 'npm test' into the command line.
   ## Questions
    * GitHub: [dog-dossier](http://github.com/jd-rowley/dog-dossier)
-   * E-mail: jdrowley1989@gmail.com, amber.rain.phillips@gmail.com, tony.slonaker@gmail.com
+   * E-mail: jdrowley1989@gmail.com, amber.rain.phillips@gmail.com, tony.slonaker@gmail.com, tylerallison55@gmail.com
 
 Click the image to be taken to the URL of the deployed app.
 [![Sample Page Layout](/public/images/dog_dossier.JPG)](https://the-dog-dossier.herokuapp.com)
