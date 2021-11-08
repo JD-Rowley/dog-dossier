@@ -30,8 +30,6 @@
 
 Click the image to be taken to the URL of the deployed app.
 
-https://github.com/JD-Rowley/dog-dossier/blob/main/public/img/dog_dossier.png
-
 [![dog dossier](../images/dog_dossier.JPG)](https://the-dog-dossier.herokuapp.com)
 
   
