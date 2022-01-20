@@ -1,4 +1,3 @@
-# Project 2 - Group 6
 # The Dog Dossier
   
   [
